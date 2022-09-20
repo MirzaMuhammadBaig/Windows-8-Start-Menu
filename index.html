@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>windows_8_Start_Screen</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      color: white;
+      background-color: darkblue;
+    }
+
+    .container {
+      width: 70vw;
+      height: 65vh;
+      display: grid;
+      grid-gap: 7px;
+      padding-top: 6vh;
+      padding-left: 11%;
+      grid-template-rows: repeat(5 1fr);
+      grid-template-columns: repeat(8 1fr);
+      grid-template-areas:
+        "box1 box1 box2 box2 box3 box4 box5 box5"
+        "box6 box6 box7 box7 box8 box9 box10 box10"
+        "box11 box11 box12 box12 box13 box13 box14 box15"
+        "box16 box16 box17 box17 box18 box18 box19 box20";
+    }
+
+    .top {
+      display: flex;
+      height: 100px;
+      align-items: flex-end;
+      margin-left: 11%;
+    }
+
+    .p1 {
+      font-size: 30px;
+    }
+
+    .user {
+      display: flex;
+      position: absolute;
+      right: 0px;
+      margin-right: 19%;
+    }
+
+    .p2 {
+      font-size: 30px;
+    }
+
+    .user img {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media only screen and (max-width: 630px) {
+      .user {
+        margin-right: 7%;
+      }
+    }
+
+    @media only screen and (max-width: 530px) {
+      .user {
+        margin-right: 1%;
+      }
+    }
+
+    @media only screen and (max-width: 490px) {
+      .user {
+        margin-right: 1%;
+      }
+    }
+
+    @media only screen and (max-width: 555px) {
+      .user {
+        position: fixed;
+      }
+    }
+
+    .box {
+      color: white;
+      text-align: center;
+      display: flex;
+    }
+
+    .box p {
+      align-self: flex-end;
+      font-size: 16px;
+    }
+
+    .box1 {
+      background-image: url(./img/mail.png);
+      background-color: #008299;
+      background-position: center;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      grid-area: box1;
+    }
+
+    .box2 {
+      background-color: #5133ab;
+      background-image: url(./img/Calendar.ico);
+      background-position: center;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      grid-area: box2;
+    }
+
+    .box3 {
+      background-color: #39bbea;
+      background-image: url(./img/int-exp.png);
+      background-position: center;
+      background-size: 40px;
+      background-repeat: no-repeat;
+      grid-area: box3;
+    }
+
+    .box4 {
+      background-color: #019601;
+      background-image: url(./img/store.png);
+      background-position: center;
+      background-size: 70px;
+      background-repeat: no-repeat;
+      grid-area: box4;
+    }
+
+    .box5 {
+      background-image: url(./img/desert.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-area: box5;
+      margin-left: 56px;
+    }
+
+    .box6 {
+      background-image: url(./img/people.webp);
+      background-color: #d24726;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50px;
+      grid-area: box6;
+    }
+
+    .box7 {
+      background-color: #008299;
+      background-image: url(./img/photos.png);
+      background-position: center;
+      background-size: 80px 70px;
+      background-repeat: no-repeat;
+      grid-area: box7;
+    }
+
+    .box8 {
+      background-image: url(./img/map.png);
+      background-color: #8c0095;
+      background-position: center;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      grid-area: box8;
+    }
+
+    .box9 {
+      background-color: #094ab2;
+      background-image: url(./img/skyDrives.png);
+      background-position: center;
+      background-size: 140px;
+      background-repeat: no-repeat;
+      grid-area: box9;
+      padding: 0px 22px;
+    }
+
+    .box10 {
+      background-color: #039aaf;
+      background-image: url(./img/travel.jpg);
+      background-position: center;
+      background-size: 160px 60px;
+      background-repeat: no-repeat;
+      grid-area: box10;
+      margin-left: 56px;
+    }
+
+    .box11 {
+      background-image: url(./img/messaging.png);
+      background-color: #8c0496;
+      background-position: center;
+      background-size: 70px;
+      background-repeat: no-repeat;
+      grid-area: box11;
+    }
+
+    .box12 {
+      background-image: url(./img/finance.png);
+      background-color: #008a00;
+      background-position: center;
+      background-size: 90px 70px;
+      background-repeat: no-repeat;
+      grid-area: box12;
+    }
+
+    .box13 {
+      background-color: #5133ab;
+      background-image: url(./img/sport.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60px;
+      grid-area: box13;
+    }
+
+    .box14 {
+      background-color: #008900;
+      background-image: url(./img/games.png);
+      background-position: center;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      grid-area: box14;
+      margin-left: 56px;
+    }
+
+    .box15 {
+      background-color: #7d299c;
+      background-image: url(./img/camera.png);
+      background-position: center;
+      background-size: 60px;
+      background-repeat: no-repeat;
+      grid-area: box15;
+    }
+
+    .box16 {
+      background-image: url(./img/flower.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-area: box16;
+    }
+
+    .box17 {
+      background-color: #2672ec;
+      background-image: url(./img/weather.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50px;
+      grid-area: box17;
+    }
+
+    .box18 {
+      background-color: #ac193d;
+      background-image: url(./img/news.png);
+      background-position: center;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      grid-area: box18;
+    }
+
+    .box19 {
+      background-color: #d24726;
+      background-image: url(./img/musc.png);
+      background-position: center;
+      background-size: 90px;
+      background-repeat: no-repeat;
+      grid-area: box19;
+      margin-left: 56px;
+    }
+
+    .box20 {
+      background-color: #ac193d;
+      background-image: url(./img/video.png);
+      background-position: center;
+      background-size: 70px 90px;
+      background-repeat: no-repeat;
+      grid-area: box20;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <p class="p1">Start</p>
+    <div class="user">
+      <p class="p2">User</p>
+      <img src="./img//windows_8_user_logo.png" alt="LOGO" />
+    </div>
+  </div>
+  <div class="container">
+    <div class="box box1">
+      <p>Mail</p>
+    </div>
+    <div class="box box2">
+      <p>Calendar</p>
+    </div>
+    <div class="box box3">
+      <p>Internet Explorer</p>
+    </div>
+    <div class="box box4">
+      <p>Store</p>
+    </div>
+    <div class="box box5">
+      <p>Eng</p>
+    </div>
+
+    <div class="box box6">
+      <p>People</p>
+    </div>
+    <div class="box box7">
+      <p>Photos</p>
+    </div>
+    <div class="box box8">
+      <p>Map</p>
+    </div>
+    <div class="box box9">
+      <p>SkyDrive</p>
+    </div>
+    <div class="box box10">
+      <p>Travel</p>
+    </div>
+    <div class="box box11">
+      <p>Messaging</p>
+    </div>
+    <div class="box box12">
+      <p>Finance</p>
+    </div>
+    <div class="box box13">
+      <p>Sports</p>
+    </div>
+    <div class="box box14">
+      <p>Games</p>
+    </div>
+    <div class="box box15">
+      <p>Camera</p>
+    </div>
+    <div class="box box16">
+      <p>Destop</p>
+    </div>
+    <div class="box box17">
+      <p>Weather</p>
+    </div>
+    <div class="box box18">
+      <p>News</p>
+    </div>
+    <div class="box box19">
+      <p>Music</p>
+    </div>
+    <div class="box box20">
+      <p>Video</p>
+    </div>
+  </div>
+</body>
+
+</html>
